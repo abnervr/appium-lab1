@@ -1,10 +1,13 @@
 package br.com.unicamp.inf321.models.bookstore;
 
 import org.graphwalker.core.machine.ExecutionContext;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.unicamp.inf321.Diagrama;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
 public class BookStoreModel extends ExecutionContext implements Diagrama {
@@ -12,12 +15,8 @@ public class BookStoreModel extends ExecutionContext implements Diagrama {
 	private AndroidDriver<WebElement> driver;
 	private WebDriverWait wait;
 
-	public BookStoreModel() {
-		super();
-	}
-	
 	public BookStoreModel(AndroidDriver<WebElement> driver) {
-		this();
+		super();
 		this.driver = driver;
 		wait = new WebDriverWait(driver, 30);
 	}
@@ -78,8 +77,9 @@ public class BookStoreModel extends ExecutionContext implements Diagrama {
 
 	@Override
 	public void e_FinalizarCompra() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_FinalizarCompra");
+		TouchAction touchAction = new TouchAction(driver);
+    	touchAction.tap(1054, 556).perform();			
 	}
 
 	@Override
@@ -156,14 +156,14 @@ public class BookStoreModel extends ExecutionContext implements Diagrama {
 
 	@Override
 	public void e_init() {
-		// TODO Auto-generated method stub
-		
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("android:id/14623175")));
 	}
 
 	@Override
 	public void e_IncrementarQtd() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_AdicionarProduto");
+		TouchAction touchAction = new TouchAction(driver);
+    	touchAction.tap(703, 462).perform();	
 	}
 
 	@Override
@@ -198,8 +198,9 @@ public class BookStoreModel extends ExecutionContext implements Diagrama {
 
 	@Override
 	public void e_SelecionarProduto() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Selecionar produto");
+		TouchAction touchAction = new TouchAction(driver);
+    	touchAction.tap(181, 635).perform();
 	}
 
 	@Override
@@ -222,8 +223,10 @@ public class BookStoreModel extends ExecutionContext implements Diagrama {
 
 	@Override
 	public void e_AdicionarProduto() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_AdicionarProduto");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
+		TouchAction touchAction = new TouchAction(driver);
+    	touchAction.tap(871, 597).perform();		
 	}
 	
 }

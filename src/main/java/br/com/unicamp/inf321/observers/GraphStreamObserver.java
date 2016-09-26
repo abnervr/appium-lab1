@@ -77,8 +77,9 @@ public class GraphStreamObserver implements Observer {
                         ((RuntimeVertex) lastElement).hasSharedState() &&
                         machine.getCurrentContext() != lastContext) {
                     if (null == graph.getEdge(getId(lastContext, lastElement) + getId(machine.getCurrentContext(), vertex))) {
-                        graph.addEdge(getId(lastContext, lastElement) + getId(machine.getCurrentContext(), vertex),
-                                graph.getNode(getId(lastContext, lastElement)),
+                        Node node = graph.getNode(getId(lastContext, lastElement));
+						graph.addEdge(getId(lastContext, lastElement) + getId(machine.getCurrentContext(), vertex),
+                                node,
                                 graph.getNode(getId(machine.getCurrentContext(), vertex)), true);
                     }
                 }

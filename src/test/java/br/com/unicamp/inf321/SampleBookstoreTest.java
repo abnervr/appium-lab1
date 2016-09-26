@@ -30,6 +30,7 @@ import org.junit.rules.TestName;
 import br.com.unicamp.inf321.helper.GraphWalkerTestBuilder;
 import br.com.unicamp.inf321.models.SmallExampleModel;
 import br.com.unicamp.inf321.models.bookstore.BookStoreModel;
+import br.com.unicamp.inf321.models.bookstore.FakeBookStoreModel;
 import br.com.unicamp.inf321.observers.GraphStreamObserver;
 
 public class SampleBookstoreTest {
@@ -68,7 +69,7 @@ public class SampleBookstoreTest {
 		
 		Result result = new GraphWalkerTestBuilder()
 				.addModel(MODEL_PATH,
-						cp, new BookStoreModel())
+						cp, new FakeBookStoreModel())
 				.addObserver(observer)
 				.execute(true);
 		Assertions.assertThat(result.getErrors()).as("Errors: [" + String.join(", ", result.getErrors()) + "]").isNullOrEmpty();
@@ -78,7 +79,7 @@ public class SampleBookstoreTest {
 	public void runStabilityTest() {
 		Result result = new GraphWalkerTestBuilder()
 				.addModel(MODEL_PATH,
-						new RandomPath(new TimeDuration(30, TimeUnit.SECONDS)), new BookStoreModel())
+						new RandomPath(new TimeDuration(30, TimeUnit.SECONDS)), new FakeBookStoreModel())
 				.addObserver(observer)
 				.execute(true);
 		Assertions.assertThat(result.getErrors()).as("Errors: [" + String.join(", ", result.getErrors()) + "]").isNullOrEmpty();
@@ -87,7 +88,7 @@ public class SampleBookstoreTest {
 	@Test
 	public void runFunctionalTest() {
 		Result result = new GraphWalkerTestBuilder()
-				.addModel(MODEL_PATH, new RandomPath(new EdgeCoverage(100)), new BookStoreModel())
+				.addModel(MODEL_PATH, new RandomPath(new EdgeCoverage(100)), new FakeBookStoreModel())
 				.addObserver(observer)
 				.execute(true);
 		Assertions.assertThat(result.getErrors()).as("Errors: [" + String.join(", ", result.getErrors()) + "]").isNullOrEmpty();
