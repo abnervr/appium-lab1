@@ -7,12 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import br.com.unicamp.inf321.Diagrama;
+import br.com.unicamp.inf321.Bookstore;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
 @GraphWalker(value = "random(edge_coverage(100))", start = "v_PaginaInicialDePesquisa")
-public class BookStoreModel extends ExecutionContext implements Diagrama {
+public class BookStoreModel extends ExecutionContext implements Bookstore {
 
 	private AndroidDriver<WebElement> driver;
 	private WebDriverWait wait;
@@ -25,202 +25,198 @@ public class BookStoreModel extends ExecutionContext implements Diagrama {
 
 	@Override
 	public void e_FinalizarCarrinho() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_FinalizarCarrinho");
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.tap(181, 635).perform();
 	}
 
 	@Override
 	public void e_SelecionarEndereco() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_SelecionarEndereco");
+
 	}
 
 	@Override
 	public void e_RealizarPagamentoBoleto() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_RealizarPagamentoBoleto");
+
 	}
 
 	@Override
 	public void e_SelecionarCartao() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_SelecionarCartao");
+
 	}
 
 	@Override
 	public void v_Cadastro_De_Endereco() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("v_Cadastro_De_Endereco");
+
 	}
 
 	@Override
 	public void e_DecrementarQtd() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_DecrementarQtd");
+
 	}
 
 	@Override
 	public void e_VoltarParaCarrinhoDeslogado() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_VoltarParaCarrinhoDeslogado");
+
 	}
 
 	@Override
 	public void v_Carrinho_Cliente_Deslogado() {
-		// TODO Auto-generated method stub
-		
-	}
+		System.out.println("v_Carrinho_Cliente_Deslogado");
 
-	@Override
-	public void v_PagamentoComCartaoCredito() {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void e_FinalizarCompra() {
 		System.out.println("e_FinalizarCompra");
 		TouchAction touchAction = new TouchAction(driver);
-    	touchAction.tap(1054, 556).perform();			
+		touchAction.tap(1054, 556).perform();
 	}
 
 	@Override
 	public void v_Selecao_De_Enderecos() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("v_Selecao_De_Enderecos");
+
 	}
 
 	@Override
 	public void e_RealizarLogin() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_RealizarLogin");
+
 	}
 
 	@Override
 	public void e_VoltarParaCarrinho() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_VoltarParaCarrinho");
+
 	}
 
 	@Override
 	public void v_Modalidades_De_Entrega() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("v_Modalidades_De_Entrega");
+
 	}
 
 	@Override
 	public void e_SelecionarModalidadeDeEntrega() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_SelecionarModalidadeDeEntrega");
+
 	}
 
 	@Override
 	public void e_RetornaPaginaInicial() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_RetornaPaginaInicial");
+
 	}
 
 	@Override
 	public void e_SelecionarBoleto() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_SelecionarBoleto");
+
 	}
 
 	@Override
 	public void v_Compra_Finalizada() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("v_Compra_Finalizada");
+
 	}
 
 	@Override
 	public void v_PaginaComProduto() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("v_PaginaComProduto");
+
 	}
 
 	@Override
 	public void e_RealizarPagamentoCartao() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_RealizarPagamentoCartao");
+
 	}
 
 	@Override
 	public void v_Formas_De_Pagamento() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("v_Formas_De_Pagamento");
+
 	}
 
 	@Override
 	public void v_PaginaInicialDePesquisa() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("v_PaginaInicialDePesquisa");
+
 	}
 
 	@Override
 	public void e_init() {
+		System.out.println("e_init");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	@Override
 	public void e_IncrementarQtd() {
-		System.out.println("e_AdicionarProduto");
+		System.out.println("e_IncrementarQtd");
 		TouchAction touchAction = new TouchAction(driver);
-    	touchAction.tap(703, 462).perform();	
+		touchAction.tap(703, 462).perform();
 	}
 
 	@Override
 	public void v_Resumo_Da_Compra() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("v_Resumo_Da_Compra");
+
 	}
 
 	@Override
 	public void e_VoltarParaCarrinhoSemEndereco() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_VoltarParaCarrinhoSemEndereco");
+
 	}
 
 	@Override
 	public void e_IncluirEndereco() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_IncluirEndereco");
+
 	}
 
 	@Override
 	public void v_Carrinho() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("v_Carrinho");
+
 	}
 
 	@Override
 	public void e_RemoverEndereco() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_RemoverEndereco");
+
 	}
 
 	@Override
 	public void e_SelecionarProduto() {
-		System.out.println("Selecionar produto");
+		System.out.println("e_SelecionarProduto");
 		TouchAction touchAction = new TouchAction(driver);
-    	touchAction.tap(181, 635).perform();
+		touchAction.tap(181, 635).perform();
 	}
 
 	@Override
 	public void e_Voltar() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_Voltar");
+
 	}
 
 	@Override
 	public void e_Deslogar() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_Deslogar");
+
 	}
 
 	@Override
 	public void e_FinalizarPagamento() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("e_FinalizarPagamento");
+
 	}
 
 	@Override
@@ -228,7 +224,55 @@ public class BookStoreModel extends ExecutionContext implements Diagrama {
 		System.out.println("e_AdicionarProduto");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 		TouchAction touchAction = new TouchAction(driver);
-    	touchAction.tap(871, 597).perform();		
+		touchAction.tap(871, 597).perform();
 	}
-	
+
+	@Override
+	public void e_EscolherOutraFormaDePagamento() {
+		System.out.println("e_EscolherOutraFormaDePagamento");
+
+	}
+
+	@Override
+	public void e_ErroAoProcessarPagamento() {
+		System.out.println("e_ErroAoProcessarPagamento");
+
+	}
+
+	@Override
+	public void v_Dados_Do_Cartao() {
+		System.out.println("v_Dados_Do_Cartao");
+
+	}
+
+	@Override
+	public void v_Intermediador_De_Pagamentos() {
+		System.out.println("v_Intermediador_De_Pagamentos");
+
+	}
+
+	@Override
+	public void v_PaginaIDErro() {
+		System.out.println("v_PaginaIDErro");
+
+	}
+
+	@Override
+	public void e_ValidarPreenchimento() {
+		System.out.println("e_ValidarPreenchimento");
+
+	}
+
+	@Override
+	public void e_Pesquisar() {
+		System.out.println("e_Pesquisar");
+
+	}
+
+	@Override
+	public void e_fechar() {
+		System.out.println("e_fechar");
+
+	}
+
 }
