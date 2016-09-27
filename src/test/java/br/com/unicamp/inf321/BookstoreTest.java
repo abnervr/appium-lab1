@@ -38,7 +38,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import br.com.unicamp.inf321.helper.GraphWalkerTestBuilder;
-import br.com.unicamp.inf321.models.noteslist.NotesListModel;
+import br.com.unicamp.inf321.models.bookstore.BookStoreModel;
 import br.com.unicamp.inf321.observers.GraphStreamObserver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
@@ -99,7 +99,7 @@ public class BookstoreTest {
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
-		driver.rotate(ScreenOrientation.PORTRAIT); //rotaciona tela
+		driver.rotate(ScreenOrientation.LANDSCAPE); //rotaciona tela
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //seta timeout implicito (sempre vai esperar no minimo 5 segundos pelo elemento na tela)
 	}
 
@@ -111,13 +111,13 @@ public class BookstoreTest {
 	@Test
 	public void runSmokeTest() {
 		CombinedPath cp = new CombinedPath();
-		cp.addPathGenerator(new AStarPath(new ReachedEdge("e_Create")));
-		cp.addPathGenerator(new AStarPath(new ReachedVertex("v_EditTitleView")));
-		cp.addPathGenerator(new AStarPath(new ReachedVertex("v_EditNoteView")));
+		cp.addPathGenerator(new AStarPath(new ReachedEdge("e_FinalizarCarrinho")));
+		//cp.addPathGenerator(new AStarPath(new ReachedVertex("v_EditTitleView")));
+		cp.addPathGenerator(new AStarPath(new ReachedVertex("v_Compra_Finalizada")));
 		
 		Result result = new GraphWalkerTestBuilder()
 				.addModel(MODEL_PATH,
-						cp, new NotesListModel(driver))
+						cp, new BookStoreModel(driver))
 				.addObserver(observer) //adicona observer para ver execução do modelo animada
 				.execute(true);
 		Assertions.assertThat(result.getErrors()).as("Errors: [" + String.join(", ", result.getErrors()) + "]").isNullOrEmpty();
@@ -127,7 +127,7 @@ public class BookstoreTest {
 	public void runStabilityTest() {
 		Result result = new GraphWalkerTestBuilder()
 				.addModel(MODEL_PATH,
-						new RandomPath(new TimeDuration(60, TimeUnit.SECONDS)), "e_Init", new NotesListModel(driver))
+						new RandomPath(new TimeDuration(60, TimeUnit.SECONDS)), "e_init", new BookStoreModel(driver))
 				.addObserver(observer) //adicona observer para ver execução do modelo animada
 				.execute(true);
 		Assertions.assertThat(result.getErrors()).as("Errors: [" + String.join(", ", result.getErrors()) + "]").isNullOrEmpty();
@@ -136,7 +136,7 @@ public class BookstoreTest {
 	@Test
 	public void runFunctionalTest() {
 		Result result = new GraphWalkerTestBuilder()
-				.addModel(MODEL_PATH, new RandomPath(new EdgeCoverage(100)), "e_Init", new NotesListModel(driver))
+				.addModel(MODEL_PATH, new RandomPath(new EdgeCoverage(100)), "e_init", new BookStoreModel(driver))
 				.addObserver(observer) //adicona observer para ver execução do modelo animada
 				.execute(true);
 		Assertions.assertThat(result.getErrors()).as("Errors: [" + String.join(", ", result.getErrors()) + "]").isNullOrEmpty();

@@ -1,6 +1,7 @@
 package br.com.unicamp.inf321.models.bookstore;
 
 import org.graphwalker.core.machine.ExecutionContext;
+import org.graphwalker.java.annotation.GraphWalker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,6 +11,7 @@ import br.com.unicamp.inf321.Diagrama;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
+@GraphWalker(value = "random(edge_coverage(100))", start = "v_PaginaInicialDePesquisa")
 public class BookStoreModel extends ExecutionContext implements Diagrama {
 
 	private AndroidDriver<WebElement> driver;
@@ -156,7 +158,7 @@ public class BookStoreModel extends ExecutionContext implements Diagrama {
 
 	@Override
 	public void e_init() {
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("android:id/14623175")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	@Override
