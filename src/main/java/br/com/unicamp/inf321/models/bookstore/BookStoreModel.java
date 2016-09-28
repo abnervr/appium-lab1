@@ -23,16 +23,28 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		wait = new WebDriverWait(driver, 30);
 	}
 
+	private void swipeUp() {
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
+		driver.swipe(500, 0, 500, 700, 500);
+		driver.swipe(500, 0, 500, 700, 500);
+	}
+
+	private void swipeDown() {
+		driver.swipe(500, 700, 500, 0, 500);
+		driver.swipe(500, 700, 500, 0, 500);
+	}
+	
 	@Override
 	public void e_FinalizarCarrinho() {
 		System.out.println("e_FinalizarCarrinho");
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(300, 600).perform();
-		//CEP
+		// CEP
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
-		driver.swipe(500, 600, 500, 0, 500);
+		swipeDown();
 		touchAction = new TouchAction(driver);
 		touchAction.tap(1070, 370).perform();
+		swipeUp();
 	}
 
 	@Override
@@ -120,6 +132,9 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		System.out.println("e_RetornaPaginaInicial");
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(600, 530).perform();
+		// HOME
+		// TouchAction touchAction = new TouchAction(driver);
+		// touchAction.tap(113, 82).perform();
 	}
 
 	@Override
@@ -143,9 +158,10 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_RealizarPagamentoCartao() {
 		System.out.println("e_RealizarPagamentoCartao");
-		driver.swipe(500, 600, 500, 0, 500);
+		swipeDown();
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(200, 280).perform();
+		swipeUp();
 	}
 
 	@Override
@@ -276,13 +292,17 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_Pesquisar() {
 		System.out.println("e_Pesquisar");
-
+		// Botão de pesquisa
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.tap(1150, 240).perform();
 	}
 
 	@Override
 	public void e_fechar() {
 		System.out.println("e_fechar");
-
+		// Fechar tela de erro
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.tap(178, 77).perform();
 	}
 
 }
