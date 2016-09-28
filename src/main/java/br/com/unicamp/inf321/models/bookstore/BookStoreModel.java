@@ -27,7 +27,12 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	public void e_FinalizarCarrinho() {
 		System.out.println("e_FinalizarCarrinho");
 		TouchAction touchAction = new TouchAction(driver);
-		touchAction.tap(181, 635).perform();
+		touchAction.tap(300, 600).perform();
+		//CEP
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
+		driver.swipe(500, 600, 500, 0, 500);
+		touchAction = new TouchAction(driver);
+		touchAction.tap(1070, 370).perform();
 	}
 
 	@Override
@@ -88,7 +93,8 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_RealizarLogin() {
 		System.out.println("e_RealizarLogin");
-
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.tap(142, 511).perform();
 	}
 
 	@Override
@@ -112,7 +118,8 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_RetornaPaginaInicial() {
 		System.out.println("e_RetornaPaginaInicial");
-
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.tap(600, 530).perform();
 	}
 
 	@Override
@@ -136,7 +143,9 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_RealizarPagamentoCartao() {
 		System.out.println("e_RealizarPagamentoCartao");
-
+		driver.swipe(500, 600, 500, 0, 500);
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.tap(200, 280).perform();
 	}
 
 	@Override
@@ -162,6 +171,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		System.out.println("e_IncrementarQtd");
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(703, 462).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	@Override
