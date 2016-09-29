@@ -35,7 +35,7 @@ import br.com.unicamp.inf321.observers.GraphStreamObserver;
 
 public class SampleBookstoreTest {
 	
-	public final static Path MODEL_PATH = Paths.get("/br/com/unicamp/inf321/Diagrama.graphml");
+	public final static Path MODEL_PATH = Paths.get("/br/com/unicamp/inf321/Bookstore.graphml");
 	private Observer observer;
 	private Graph graph;
 	

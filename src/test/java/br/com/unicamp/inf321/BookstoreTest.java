@@ -45,7 +45,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BookstoreTest {
-	public final static Path MODEL_PATH = Paths.get("/br/com/unicamp/inf321/Diagrama.graphml");
+	public final static Path MODEL_PATH = Paths.get("/br/com/unicamp/inf321/Bookstore.graphml");
 	private static AndroidDriver<WebElement> driver;
 	private Observer observer;
 	private Graph graph;
