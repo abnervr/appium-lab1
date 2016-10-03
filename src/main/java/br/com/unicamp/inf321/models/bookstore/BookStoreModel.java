@@ -26,9 +26,9 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_AdicionarProduto() {
 		System.out.println("e_AdicionarProduto");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
-		touchAction.tap(850, 590).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
+		touchAction.tap(840, 590).perform();
 	}
 
 	@Override
@@ -49,59 +49,59 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_EscolherOutraFormaDePagamento() {
 		System.out.println("e_EscolherOutraFormaDePagamento");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(178, 77).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	@Override
 	public void e_fechar() {
 		System.out.println("e_fechar");
 		// Fechar tela de erro
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(178, 77).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	private void e_FinalizarCarrinho() {
-		System.out.println("e_FinalizarCarrinho");
-		TouchAction touchAction = new TouchAction(driver);
-		touchAction.tap(300, 600).perform();
-		// CEP
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
-		swipeDown();
-		touchAction = new TouchAction(driver);
-		touchAction.tap(1070, 370).perform();
-		swipeUp();
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		new TouchAction(driver).tap(300, 600).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		driver.swipe(500, 700, 500, 0, 500);
+		driver.swipe(500, 700, 500, 0, 500);
+		driver.swipe(500, 700, 500, 0, 500);
+		new TouchAction(driver).tap(1070, 360).perform();
 	}
 
 	@Override
 	public void e_FinalizarCarrinhoDeslogado() {
+		System.out.println("e_FinalizarCarrinhoDeslogado");
 		e_FinalizarCarrinho();
 	}
 
 	@Override
 	public void e_FinalizarCarrinhoLogadoComEndereco() {
+		System.out.println("e_FinalizarCarrinhoLogadoComEndereco");
 		e_FinalizarCarrinho();
 	}
 
 	@Override
 	public void e_FinalizarCarrinhoLogadoSemEndereco() {
+		System.out.println("e_FinalizarCarrinhoLogadoSemEndereco");
 		e_FinalizarCarrinho();
 	}
 
 	@Override
 	public void e_FinalizarCompra() {
 		System.out.println("e_FinalizarCompra");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(1054, 556).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	@Override
 	public void e_FinalizarPagamento() {
 		System.out.println("e_FinalizarPagamento");
-
 	}
 
 	@Override
@@ -113,48 +113,49 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_IncrementarQtd() {
 		System.out.println("e_IncrementarQtd");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(703, 462).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	@Override
 	public void e_init() {
 		System.out.println("e_init");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
 	public void e_Pesquisar() {
 		System.out.println("e_Pesquisar");
 		// Botão de pesquisa
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(1150, 240).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	@Override
 	public void e_RealizarLogin() {
 		System.out.println("e_RealizarLogin");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(142, 511).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	@Override
 	public void e_RealizarPagamentoBoleto() {
 		System.out.println("e_RealizarPagamentoBoleto");
-
+		//Realiza o pagamento via cartao
+		e_RealizarPagamentoCartao();
 	}
 
 	@Override
 	public void e_RealizarPagamentoCartao() {
 		System.out.println("e_RealizarPagamentoCartao");
-		swipeDown();
-		TouchAction touchAction = new TouchAction(driver);
-		touchAction.tap(200, 280).perform();
-		swipeUp();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		driver.swipe(500, 700, 500, 0, 500);
+		driver.swipe(500, 700, 500, 0, 500);
+		driver.swipe(500, 700, 500, 0, 500);
+		new TouchAction(driver).tap(200, 280).perform();
 	}
 
 	@Override
@@ -166,6 +167,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_RetornaPaginaInicial() {
 		System.out.println("e_RetornaPaginaInicial");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(600, 530).perform();
 		// HOME
@@ -199,9 +201,9 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_SelecionarProduto() {
 		System.out.println("e_SelecionarProduto");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(181, 635).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	@Override
@@ -213,9 +215,9 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_Voltar() {
 		System.out.println("e_Voltar");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(121, 174).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	@Override
@@ -223,34 +225,23 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		System.out.println("e_VoltarParaCarrinho");
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(495, 178).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
 	public void e_VoltarParaCarrinhoDeslogado() {
 		System.out.println("e_VoltarParaCarrinhoDeslogado");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(495, 178).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
 	}
 
 	@Override
 	public void e_VoltarParaCarrinhoSemEndereco() {
 		System.out.println("e_VoltarParaCarrinhoSemEndereco");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(495, 178).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
-	}
-
-	private void swipeDown() {
-		driver.swipe(500, 700, 500, 0, 500);
-		driver.swipe(500, 700, 500, 0, 500);
-	}
-
-	private void swipeUp() {
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.webkit.WebView")));
-		driver.swipe(500, 0, 500, 700, 500);
-		driver.swipe(500, 0, 500, 700, 500);
 	}
 
 	@Override
@@ -261,16 +252,19 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_Carrinho() {
 		System.out.println("v_Carrinho");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
 	public void v_Carrinho_Cliente_Deslogado() {
 		System.out.println("v_Carrinho_Cliente_Deslogado");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
 	public void v_Compra_Finalizada() {
 		System.out.println("v_Compra_Finalizada");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
@@ -281,6 +275,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_Formas_De_Pagamento() {
 		System.out.println("v_Formas_De_Pagamento");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
@@ -296,6 +291,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_PaginaComProduto() {
 		System.out.println("v_PaginaComProduto");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
@@ -306,11 +302,13 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_PaginaInicialDePesquisa() {
 		System.out.println("v_PaginaInicialDePesquisa");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
 	public void v_Resumo_Da_Compra() {
 		System.out.println("v_Resumo_Da_Compra");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
