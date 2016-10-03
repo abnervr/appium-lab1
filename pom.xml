@@ -93,8 +93,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -102,15 +102,15 @@
 				<artifactId>graphwalker-maven-plugin</artifactId>
 				<version>${graphwalker.version}</version>
 				<!-- Bind goals to the default lifecycle -->
-				<executions>
+				<!-- <executions>
 					<execution>
 						<id>generate-sources</id>
 						<phase>generate-sources</phase>
 						<goals>
 							<goal>generate-sources</goal>
 						</goals>
-					</execution>
-				</executions>
+					</execution >
+				</executions> -->
 			</plugin>
 		</plugins>
 	</build>
