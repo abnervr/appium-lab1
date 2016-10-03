@@ -51,7 +51,8 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		System.out.println("e_EscolherOutraFormaDePagamento");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
-		touchAction.tap(178, 77).perform();
+		touchAction.tap(570, 165).perform();
+		e_RealizarLogin();
 	}
 
 	@Override
@@ -83,12 +84,14 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	public void e_FinalizarCarrinhoLogadoComEndereco() {
 		System.out.println("e_FinalizarCarrinhoLogadoComEndereco");
 		e_FinalizarCarrinho();
+		e_RealizarLogin();
 	}
 
 	@Override
 	public void e_FinalizarCarrinhoLogadoSemEndereco() {
 		System.out.println("e_FinalizarCarrinhoLogadoSemEndereco");
 		e_FinalizarCarrinho();
+		e_RealizarLogin();
 	}
 
 	@Override
@@ -113,15 +116,11 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_IncrementarQtd() {
 		System.out.println("e_IncrementarQtd");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
-		TouchAction touchAction = new TouchAction(driver);
-		touchAction.tap(703, 462).perform();
 	}
 
 	@Override
 	public void e_init() {
 		System.out.println("e_init");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
@@ -144,7 +143,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_RealizarPagamentoBoleto() {
 		System.out.println("e_RealizarPagamentoBoleto");
-		//Realiza o pagamento via cartao
+		//Realiza o pagamento via cartao, para simular o pagamento via boleto
 		e_RealizarPagamentoCartao();
 	}
 
@@ -161,7 +160,6 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_RemoverEndereco() {
 		System.out.println("e_RemoverEndereco");
-
 	}
 
 	@Override
@@ -170,9 +168,6 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(600, 530).perform();
-		// HOME
-		// TouchAction touchAction = new TouchAction(driver);
-		// touchAction.tap(113, 82).perform();
 	}
 
 	@Override
@@ -234,6 +229,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(495, 178).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
@@ -242,6 +238,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(495, 178).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
