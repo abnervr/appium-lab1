@@ -28,8 +28,6 @@ import org.junit.Test;
 import org.junit.rules.TestName;
 
 import br.com.unicamp.inf321.helper.GraphWalkerTestBuilder;
-import br.com.unicamp.inf321.models.SmallExampleModel;
-import br.com.unicamp.inf321.models.bookstore.BookStoreModel;
 import br.com.unicamp.inf321.models.bookstore.FakeBookStoreModel;
 import br.com.unicamp.inf321.observers.GraphStreamObserver;
 
