@@ -177,7 +177,7 @@
     <node id="n10">
       <data key="d6">
         <y:GenericNode configuration="BevelNode">
-          <y:Geometry height="30.0" width="151.0" x="395.6350000000001" y="78.80555555555557"/>
+          <y:Geometry height="30.0" width="151.0" x="308.1350000000001" y="97.34944044764185"/>
           <y:Fill color="#FF9900" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="127.146484375" x="10.301757812499886" y="6.019218749999993">v_PaginaComProduto<y:LabelModel>
@@ -225,7 +225,7 @@
     <node id="n13">
       <data key="d6">
         <y:GenericNode configuration="BevelNode">
-          <y:Geometry height="30.0" width="151.0" x="371.6487358184768" y="-150.79245452908333"/>
+          <y:Geometry height="30.0" width="151.0" x="594.1753545235127" y="-35.99344948676388"/>
           <y:Fill color="#FF9900" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="90.63671875" x="28.556640624999886" y="6.019218749999993">v_PaginaIDErro<y:LabelModel>
@@ -244,7 +244,7 @@
           <y:Path sx="107.4737548828125" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="168.408203125" x="68.14091801234827" y="79.89595554538971">e_FinalizarCarrinho
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="178.1640625" x="63.262988324848266" y="79.89595554538971">e_FinalizarCarrinhoDeslogado
 [!loggedIn &amp;&amp; produtos &gt; 0]<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
@@ -340,7 +340,7 @@
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="284.11328125" x="-285.9205319684821" y="141.55967269064183">e_FinalizarCarrinho 
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="284.11328125" x="-285.9205319684821" y="141.55967269064183">e_FinalizarCarrinhoLogadoSemEndereco
 [!possuiEndereco &amp;&amp; loggedIn &amp;&amp; produtos &gt; 0]<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
@@ -359,7 +359,7 @@
           <y:Path sx="0.0" sy="0.0" tx="-79.31014540540713" ty="-14.96532957344266"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="280.31640625" x="-176.9811014955357" y="81.84848022460926">e_FinalizarCarrinho 
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="280.31640625" x="-176.9811014955357" y="81.84848022460926">e_FinalizarCarrinhoLogadoComEndereco
 [possuiEndereco &amp;&amp; loggedIn &amp;&amp; produtos &gt; 0]<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
@@ -402,7 +402,7 @@
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="46.3984375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="123.654296875" x="-61.827158203124895" y="26.200141018660617">e_AdicionarProduto
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="46.3984375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="123.654296875" x="-39.274864442420665" y="22.652960714286735">e_AdicionarProduto
 [campoPesquisa!=""]
 /produtos=1;<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
@@ -549,13 +549,13 @@ produtos=0;<y:LabelModel>
     <edge id="e15" source="n10" target="n11">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="101.5096435546875" ty="0.0">
+          <y:Path sx="0.0" sy="0.0" tx="65.5388489208633" ty="10.993449486763879">
             <y:Point x="471.1350000000001" y="43.80555555555557"/>
-            <y:Point x="471.1350000000001" y="-10.0"/>
+            <y:Point x="407.2616187050361" y="25.0273381294964"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="118.673828125" x="-59.336923828124895" y="-78.04535759819879">e_Voltar
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="118.673828125" x="-22.935601780294405" y="-79.05509551587247">e_Voltar
 /campoPesquisa='';<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
@@ -621,8 +621,8 @@ produtos=0;<y:LabelModel>
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-14.990234375">
             <y:Point x="1255.1616161616162" y="1123.5"/>
-            <y:Point x="1250.1616161616162" y="-83.525279776179"/>
-            <y:Point x="277.0" y="-83.52527977617902"/>
+            <y:Point x="1239.8594578882348" y="-141.2173661071143"/>
+            <y:Point x="277.0" y="-141.21736610711426"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
@@ -662,11 +662,11 @@ produtos=0;<y:LabelModel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="277.0" y="93.80555555555557"/>
+            <y:Point x="277.0" y="73.20123900879295"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="195.173828125" x="-97.5869140625" y="44.33859726581062">e_SelecionarProduto
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="195.173828125" x="-97.5869140625" y="33.99106364529186">e_SelecionarProduto
 /campoPesquisa='dom_quixote';<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
@@ -854,15 +854,15 @@ msg='Dados inválidos, favor preencher corretamente';<y:LabelModel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="522.6905128038898" y="-46.633991364667736"/>
+            <y:Point x="504.1466279118034" y="-87.84262445819292"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="194.171875" x="-6.227570387894275" y="-43.669719871892134">e_Pesquisar[campoPesquisa=='']<y:LabelModel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="194.171875" x="79.06914378094405" y="-60.90879038226521">e_Pesquisar[campoPesquisa=='']<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="0.0" distance="28.03140062383708" distanceToCenter="true" position="left" ratio="0.5080780935203824" segment="-1"/>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="28.03140062383708" distanceToCenter="true" position="center" ratio="0.0" segment="-1"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
@@ -876,11 +876,11 @@ msg='Dados inválidos, favor preencher corretamente';<y:LabelModel>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="52.9140625" x="-134.9195600345828" y="27.923316612409835">e_fechar<y:LabelModel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFF00" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="52.9140625" x="-134.29867527730613" y="-9.066405571968964">e_fechar<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>

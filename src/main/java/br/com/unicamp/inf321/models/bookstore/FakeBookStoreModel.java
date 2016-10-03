@@ -16,12 +16,6 @@ public class FakeBookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void e_FinalizarCarrinho() {
-		System.out.println("e_FinalizarCarrinho");
-
-	}
-
-	@Override
 	public void e_SelecionarEndereco() {
 		System.out.println("e_SelecionarEndereco");
 
@@ -253,6 +247,21 @@ public class FakeBookStoreModel extends ExecutionContext implements Bookstore {
 	public void e_AdicionarProduto() {
 		System.out.println("e_AdicionarProduto");
 
+	}
+
+	@Override
+	public void e_FinalizarCarrinhoLogadoSemEndereco() {
+		System.out.println("e_FinalizarCarrinhoLogadoSemEndereco");
+	}
+
+	@Override
+	public void e_FinalizarCarrinhoDeslogado() {
+		System.out.println("e_FinalizarCarrinhoDeslogado");
+	}
+
+	@Override
+	public void e_FinalizarCarrinhoLogadoComEndereco() {
+		System.out.println("e_FinalizarCarrinhoLogadoComEndereco");		
 	}
 
 }

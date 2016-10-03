@@ -65,6 +65,8 @@ public class BookstoreTest {
 		graph.display(true);
 		observer = new GraphStreamObserver(graph);
 	}
+	
+	
 
 	@After
 	public void afterTest() throws Exception {
