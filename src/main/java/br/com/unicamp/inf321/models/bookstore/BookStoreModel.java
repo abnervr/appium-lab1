@@ -237,7 +237,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_Cadastro_De_Endereco() {
 		System.out.println("v_Cadastro_De_Endereco");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='9eb94b2bf5e94d80987db6ed5d2e8bf9']")));
 	}
 
 	@Override
@@ -277,6 +277,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_Modalidades_De_Entrega() {
 		System.out.println("v_Modalidades_De_Entrega");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='9eb94b2bf5e94d80987db6ed5d2e8bf9']")));
 	}
 
 	@Override
@@ -306,6 +307,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_Selecao_De_Enderecos() {
 		System.out.println("v_Selecao_De_Enderecos");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='9eb94b2bf5e94d80987db6ed5d2e8bf9']")));
 	}
 
 }
