@@ -178,19 +178,16 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_SelecionarCartao() {
 		System.out.println("e_SelecionarCartao");
-
 	}
 
 	@Override
 	public void e_SelecionarEndereco() {
 		System.out.println("e_SelecionarEndereco");
-
 	}
 
 	@Override
 	public void e_SelecionarModalidadeDeEntrega() {
 		System.out.println("e_SelecionarModalidadeDeEntrega");
-
 	}
 
 	@Override
@@ -204,7 +201,6 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_ValidarPreenchimento() {
 		System.out.println("e_ValidarPreenchimento");
-
 	}
 
 	@Override
@@ -218,8 +214,9 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_VoltarParaCarrinho() {
 		System.out.println("e_VoltarParaCarrinho");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
-		touchAction.tap(495, 178).perform();
+		touchAction.tap(495, 165).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
@@ -237,13 +234,14 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		System.out.println("e_VoltarParaCarrinhoSemEndereco");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
-		touchAction.tap(495, 178).perform();
+		touchAction.tap(495, 165).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
 	public void v_Cadastro_De_Endereco() {
 		System.out.println("v_Cadastro_De_Endereco");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
@@ -294,6 +292,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_PaginaIDErro() {
 		System.out.println("v_PaginaIDErro");
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
