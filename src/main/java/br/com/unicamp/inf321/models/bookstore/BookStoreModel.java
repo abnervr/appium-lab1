@@ -155,6 +155,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		driver.swipe(500, 700, 500, 0, 500);
 		driver.swipe(500, 700, 500, 0, 500);
 		driver.swipe(500, 700, 500, 0, 500);
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		new TouchAction(driver).tap(200, 280).perform();
 	}
 
