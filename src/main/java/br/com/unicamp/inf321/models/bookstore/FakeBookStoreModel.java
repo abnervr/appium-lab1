@@ -28,12 +28,6 @@ public class FakeBookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void e_SelecionarCartao() {
-		System.out.println("e_SelecionarCartao");
-
-	}
-
-	@Override
 	public void v_Cadastro_De_Endereco() {
 		System.out.println("v_Cadastro_De_Endereco");
 
@@ -114,12 +108,6 @@ public class FakeBookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_RetornaPaginaInicial() {
 		System.out.println("e_RetornaPaginaInicial");
-
-	}
-
-	@Override
-	public void e_SelecionarBoleto() {
-		System.out.println("e_SelecionarBoleto");
 
 	}
 
