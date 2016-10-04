@@ -52,6 +52,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(570, 165).perform();
+		v_Carrinho_Cliente_Deslogado();
 		e_RealizarLogin();
 	}
 
@@ -84,14 +85,18 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_FinalizarCarrinhoLogadoComEndereco() {
 		System.out.println("e_FinalizarCarrinhoLogadoComEndereco");
+		//Simulando uma carrinho logado realizando o login pelo protótipo
 		e_FinalizarCarrinho();
+		v_Carrinho_Cliente_Deslogado();
 		e_RealizarLogin();
 	}
 
 	@Override
 	public void e_FinalizarCarrinhoLogadoSemEndereco() {
 		System.out.println("e_FinalizarCarrinhoLogadoSemEndereco");
+		//Simulando uma carrinho logado realizando o login pelo protótipo
 		e_FinalizarCarrinho();
+		v_Carrinho_Cliente_Deslogado();
 		e_RealizarLogin();
 	}
 
@@ -136,7 +141,6 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_RealizarLogin() {
 		System.out.println("e_RealizarLogin");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(142, 511).perform();
 	}
@@ -239,22 +243,19 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_Carrinho() {
 		System.out.println("v_Carrinho");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
-		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='35628e6c4b0c49eea72bc6288a1e0d38' or @content-desc='6a3c9f973126440eaf8c4436d1164738']")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='35628e6c4b0c49eea72bc6288a1e0d38' or @content-desc='6a3c9f973126440eaf8c4436d1164738']")));
 	}
 
 	@Override
 	public void v_Carrinho_Cliente_Deslogado() {
 		System.out.println("v_Carrinho_Cliente_Deslogado");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
-		//72926a0fbf8a41fca4402a20b38c326b
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='72926a0fbf8a41fca4402a20b38c326b']")));
 	}
 
 	@Override
 	public void v_Compra_Finalizada() {
 		System.out.println("v_Compra_Finalizada");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
-		//fa5682b7bdab465780d16d6db7a1076b
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='fa5682b7bdab465780d16d6db7a1076b']")));
 	}
 
 	@Override
@@ -265,8 +266,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_Formas_De_Pagamento() {
 		System.out.println("v_Formas_De_Pagamento");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
-		//9eb94b2bf5e94d80987db6ed5d2e8bf9
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='9eb94b2bf5e94d80987db6ed5d2e8bf9']")));
 	}
 
 	@Override
@@ -282,27 +282,25 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_PaginaComProduto() {
 		System.out.println("v_PaginaComProduto");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
-		//edb1d1c4a47b49f580e076924454d954
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='edb1d1c4a47b49f580e076924454d954']")));
 	}
 
 	@Override
 	public void v_PaginaIDErro() {
 		System.out.println("v_PaginaIDErro");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='da99c5adab1043f48c427a2db59b5dfd']")));
 	}
 
 	@Override
 	public void v_PaginaInicialDePesquisa() {
 		System.out.println("v_PaginaInicialDePesquisa");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='f5a0f9642c284c8f8b0cdb1b958c1592' or @content-dec='686461b97beb44509af96b2a1e6420f6']")));
 	}
 
 	@Override
 	public void v_Resumo_Da_Compra() {
 		System.out.println("v_Resumo_Da_Compra");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
-		//50f626da76b748aaa871408b2aa2ec97
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='50f626da76b748aaa871408b2aa2ec97']")));
 	}
 
 	@Override
