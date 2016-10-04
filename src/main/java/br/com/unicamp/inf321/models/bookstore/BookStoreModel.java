@@ -173,16 +173,6 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void e_SelecionarBoleto() {
-		System.out.println("e_SelecionarBoleto");
-	}
-
-	@Override
-	public void e_SelecionarCartao() {
-		System.out.println("e_SelecionarCartao");
-	}
-
-	@Override
 	public void e_SelecionarEndereco() {
 		System.out.println("e_SelecionarEndereco");
 	}
@@ -250,18 +240,21 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	public void v_Carrinho() {
 		System.out.println("v_Carrinho");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='35628e6c4b0c49eea72bc6288a1e0d38' or @content-desc='6a3c9f973126440eaf8c4436d1164738']")));
 	}
 
 	@Override
 	public void v_Carrinho_Cliente_Deslogado() {
 		System.out.println("v_Carrinho_Cliente_Deslogado");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		//72926a0fbf8a41fca4402a20b38c326b
 	}
 
 	@Override
 	public void v_Compra_Finalizada() {
 		System.out.println("v_Compra_Finalizada");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		//fa5682b7bdab465780d16d6db7a1076b
 	}
 
 	@Override
@@ -273,6 +266,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	public void v_Formas_De_Pagamento() {
 		System.out.println("v_Formas_De_Pagamento");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		//9eb94b2bf5e94d80987db6ed5d2e8bf9
 	}
 
 	@Override
@@ -289,6 +283,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	public void v_PaginaComProduto() {
 		System.out.println("v_PaginaComProduto");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		//edb1d1c4a47b49f580e076924454d954
 	}
 
 	@Override
@@ -307,6 +302,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	public void v_Resumo_Da_Compra() {
 		System.out.println("v_Resumo_Da_Compra");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		//50f626da76b748aaa871408b2aa2ec97
 	}
 
 	@Override
