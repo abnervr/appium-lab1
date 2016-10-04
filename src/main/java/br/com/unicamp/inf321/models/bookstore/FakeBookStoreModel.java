@@ -46,9 +46,8 @@ public class FakeBookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void v_Carrinho_Cliente_Deslogado() {
-		System.out.println("v_Carrinho_Cliente_Deslogado");
-
+	public void v_Login() {
+		System.out.println("v_Login");
 	}
 
 	@Override

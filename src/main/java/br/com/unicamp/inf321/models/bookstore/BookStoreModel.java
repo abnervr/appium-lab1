@@ -52,7 +52,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(570, 165).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
-		v_Carrinho_Cliente_Deslogado();
+		v_Login();
 		e_RealizarLogin();
 	}
 
@@ -86,7 +86,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		System.out.println("e_FinalizarCarrinhoLogadoComEndereco");
 		//Simulando uma carrinho logado realizando o login pelo protótipo
 		e_FinalizarCarrinho();
-		v_Carrinho_Cliente_Deslogado();
+		v_Login();
 		e_RealizarLogin();
 	}
 
@@ -95,7 +95,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		System.out.println("e_FinalizarCarrinhoLogadoSemEndereco");
 		//Simulando uma carrinho logado realizando o login pelo protótipo
 		e_FinalizarCarrinho();
-		v_Carrinho_Cliente_Deslogado();
+		v_Login();
 		e_RealizarLogin();
 	}
 
@@ -247,7 +247,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void v_Carrinho_Cliente_Deslogado() {
+	public void v_Login() {
 		System.out.println("v_Carrinho_Cliente_Deslogado");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='72926a0fbf8a41fca4402a20b38c326b']")));
 	}
