@@ -165,7 +165,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	public void e_VoltarParaPaginaProduto() {
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
-		touchAction.tap(359, 180).perform();
+		touchAction.tap(359, 175).perform();
 	}
 
 	private void swipeDown() {
