@@ -99,8 +99,8 @@ public class FakeBookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void v_PaginaIDErro() {
-		System.out.println("v_PaginaIDErro");
+	public void v_PaginaDeErro() {
+		System.out.println("v_PaginaDeErro");
 
 	}
 
@@ -182,9 +182,10 @@ public class FakeBookStoreModel extends ExecutionContext implements Bookstore {
 
 	}
 
+	
 	@Override
-	public void e_fechar() {
-		System.out.println("e_fechar");
+	public void e_FecharPaginaDeErro() {
+		System.out.println("e_FecharPaginaDeErro");
 
 	}
 

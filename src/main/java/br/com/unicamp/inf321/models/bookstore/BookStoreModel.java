@@ -49,10 +49,9 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		v_Login();
 		e_RealizarLogin();
 	}
-
+	
 	@Override
-	public void e_fechar() {
-		// Fechar tela de erro
+	public void e_FecharPaginaDeErro() {
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(178, 77).perform();
@@ -222,7 +221,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void v_PaginaIDErro() {
+ 	public void v_PaginaDeErro() {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='da99c5adab1043f48c427a2db59b5dfd']")));
 	}
 
