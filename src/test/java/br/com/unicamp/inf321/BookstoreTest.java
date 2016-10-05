@@ -17,7 +17,6 @@ import org.graphstream.stream.file.FileSinkImages.OutputType;
 import org.graphstream.stream.file.FileSinkImages.RendererType;
 import org.graphstream.stream.file.FileSinkImages.Resolutions;
 import org.graphwalker.core.condition.EdgeCoverage;
-import org.graphwalker.core.condition.ReachedEdge;
 import org.graphwalker.core.condition.ReachedVertex;
 import org.graphwalker.core.condition.TimeDuration;
 import org.graphwalker.core.event.Observer;
@@ -25,6 +24,7 @@ import org.graphwalker.core.generator.AStarPath;
 import org.graphwalker.core.generator.CombinedPath;
 import org.graphwalker.core.generator.RandomPath;
 import org.graphwalker.java.test.Result;
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -61,13 +61,13 @@ public class BookstoreTest {
 		// cria observer para habilitar execução do modelo animado
 		System.setProperty("org.graphstream.ui.renderer", "org.graphstream.ui.j2dviewer.J2DGraphRenderer");
 		graph = new MultiGraph(BookstoreTest.class.getSimpleName() + "_" + testName.getMethodName());
-		//graph.display(true);
+		graph.display(true);
 		observer = new GraphStreamObserver(graph);
 	}
 	
 	
 
-	//@After
+	@After
 	public void afterTest() throws Exception {
 		//Capture screenshot
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(org.openqa.selenium.OutputType.FILE);

@@ -117,11 +117,13 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(600, 530).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
 	public void e_SelecionarEndereco() {
 		new TouchAction(driver).tap(300, 600).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
 	@Override
