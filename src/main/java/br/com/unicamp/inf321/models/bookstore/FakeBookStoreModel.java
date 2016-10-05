@@ -28,24 +28,6 @@ public class FakeBookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void v_Cadastro_De_Endereco() {
-		System.out.println("v_Cadastro_De_Endereco");
-
-	}
-
-	@Override
-	public void e_DecrementarQtd() {
-		System.out.println("e_DecrementarQtd");
-
-	}
-
-	@Override
-	public void e_VoltarParaCarrinhoDeslogado() {
-		System.out.println("e_VoltarParaCarrinhoDeslogado");
-
-	}
-
-	@Override
 	public void v_Login() {
 		System.out.println("v_Login");
 	}
@@ -59,12 +41,6 @@ public class FakeBookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_ErroAoProcessarPagamento() {
 		System.out.println("e_ErroAoProcessarPagamento");
-
-	}
-
-	@Override
-	public void v_Selecao_De_Enderecos() {
-		System.out.println("v_Selecao_De_Enderecos");
 
 	}
 
@@ -177,26 +153,8 @@ public class FakeBookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void e_VoltarParaCarrinhoSemEndereco() {
-		System.out.println("e_VoltarParaCarrinhoSemEndereco");
-
-	}
-
-	@Override
-	public void e_IncluirEndereco() {
-		System.out.println("e_IncluirEndereco");
-
-	}
-
-	@Override
 	public void v_Carrinho() {
 		System.out.println("v_Carrinho");
-
-	}
-
-	@Override
-	public void e_RemoverEndereco() {
-		System.out.println("e_RemoverEndereco");
 
 	}
 
@@ -237,18 +195,18 @@ public class FakeBookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void e_FinalizarCarrinhoLogadoSemEndereco() {
-		System.out.println("e_FinalizarCarrinhoLogadoSemEndereco");
+	public void e_FinalizarCarrinho() {
+		System.out.println("e_FinalizarCarrinho");
 	}
 
 	@Override
-	public void e_FinalizarCarrinhoDeslogado() {
-		System.out.println("e_FinalizarCarrinhoDeslogado");
+	public void e_VoltarParaModalidadesEntrega() {
+		System.out.println("e_VoltarParaModalidadesEntrega");
 	}
 
 	@Override
-	public void e_FinalizarCarrinhoLogadoComEndereco() {
-		System.out.println("e_FinalizarCarrinhoLogadoComEndereco");		
+	public void e_VoltarParaPaginaProduto() {
+		System.out.println("e_VoltarParaPaginaProduto");		
 	}
 
 }

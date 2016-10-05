@@ -32,11 +32,6 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void e_DecrementarQtd() {
-		System.out.println("e_DecrementarQtd");
-	}
-
-	@Override
 	public void e_Deslogar() {
 		System.out.println("e_Deslogar");
 	}
@@ -51,7 +46,6 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		System.out.println("e_EscolherOutraFormaDePagamento");
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(570, 165).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 		v_Login();
 		e_RealizarLogin();
 	}
@@ -64,39 +58,12 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		touchAction.tap(178, 77).perform();
 	}
 
-	private void e_FinalizarCarrinho() {
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+	@Override
+	public void e_FinalizarCarrinho() {
 		new TouchAction(driver).tap(300, 600).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
-		driver.swipe(500, 700, 500, 0, 500);
-		driver.swipe(500, 700, 500, 0, 500);
-		driver.swipe(500, 700, 500, 0, 500);
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='6a3c9f973126440eaf8c4436d1164738']")));
+		swipeDown();
 		new TouchAction(driver).tap(1070, 360).perform();
-	}
-
-	@Override
-	public void e_FinalizarCarrinhoDeslogado() {
-		System.out.println("e_FinalizarCarrinhoDeslogado");
-		e_FinalizarCarrinho();
-	}
-
-	@Override
-	public void e_FinalizarCarrinhoLogadoComEndereco() {
-		System.out.println("e_FinalizarCarrinhoLogadoComEndereco");
-		//Simulando uma carrinho logado realizando o login pelo protótipo
-		e_FinalizarCarrinho();
-		v_Login();
-		e_RealizarLogin();
-	}
-
-	@Override
-	public void e_FinalizarCarrinhoLogadoSemEndereco() {
-		System.out.println("e_FinalizarCarrinhoLogadoSemEndereco");
-		//Simulando uma carrinho logado realizando o login pelo protótipo
-		e_FinalizarCarrinho();
-		v_Login();
-		e_RealizarLogin();
 	}
 
 	@Override
@@ -110,12 +77,6 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_FinalizarPagamento() {
 		System.out.println("e_FinalizarPagamento");
-	}
-
-	@Override
-	public void e_IncluirEndereco() {
-		System.out.println("e_IncluirEndereco");
-
 	}
 
 	@Override
@@ -155,17 +116,8 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_RealizarPagamentoCartao() {
 		System.out.println("e_RealizarPagamentoCartao");
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
-		driver.swipe(500, 700, 500, 0, 500);
-		driver.swipe(500, 700, 500, 0, 500);
-		driver.swipe(500, 700, 500, 0, 500);
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		swipeDown();
 		new TouchAction(driver).tap(200, 280).perform();
-	}
-
-	@Override
-	public void e_RemoverEndereco() {
-		System.out.println("e_RemoverEndereco");
 	}
 
 	@Override
@@ -179,6 +131,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void e_SelecionarEndereco() {
 		System.out.println("e_SelecionarEndereco");
+		new TouchAction(driver).tap(300, 600).perform();
 	}
 
 	@Override
@@ -216,7 +169,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
-	@Override
+	//TODO remove
 	public void e_VoltarParaCarrinhoDeslogado() {
 		System.out.println("e_VoltarParaCarrinhoDeslogado");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
@@ -225,7 +178,7 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
 	}
 
-	@Override
+	//TODO remove
 	public void e_VoltarParaCarrinhoSemEndereco() {
 		System.out.println("e_VoltarParaCarrinhoSemEndereco");
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
@@ -235,26 +188,34 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	}
 
 	@Override
-	public void v_Cadastro_De_Endereco() {
-		System.out.println("v_Cadastro_De_Endereco");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='9eb94b2bf5e94d80987db6ed5d2e8bf9']")));
+	public void e_VoltarParaModalidadesEntrega() {
+		System.out.println("e_VoltarParaModalidadesEntrega");
+	}
+
+	@Override
+	public void e_VoltarParaPaginaProduto() {
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Image")));
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.tap(359, 180).perform();
+	}
+
+	private void swipeDown() {
+		driver.swipe(500, 700, 500, 0, 500);
+		driver.swipe(500, 700, 500, 0, 500);
+		try {
+			Thread.sleep(2000l);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void v_Carrinho() {
-		System.out.println("v_Carrinho");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='35628e6c4b0c49eea72bc6288a1e0d38' or @content-desc='6a3c9f973126440eaf8c4436d1164738']")));
 	}
 
 	@Override
-	public void v_Login() {
-		System.out.println("v_Carrinho_Cliente_Deslogado");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='72926a0fbf8a41fca4402a20b38c326b']")));
-	}
-
-	@Override
 	public void v_Compra_Finalizada() {
-		System.out.println("v_Compra_Finalizada");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='fa5682b7bdab465780d16d6db7a1076b']")));
 	}
 
@@ -272,6 +233,12 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	@Override
 	public void v_Intermediador_De_Pagamentos() {
 		System.out.println("v_Intermediador_De_Pagamentos");
+	}
+
+	@Override
+	public void v_Login() {
+		System.out.println("v_Carrinho_Cliente_Deslogado");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='72926a0fbf8a41fca4402a20b38c326b']")));
 	}
 
 	@Override
@@ -302,12 +269,6 @@ public class BookStoreModel extends ExecutionContext implements Bookstore {
 	public void v_Resumo_Da_Compra() {
 		System.out.println("v_Resumo_Da_Compra");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='50f626da76b748aaa871408b2aa2ec97']")));
-	}
-
-	@Override
-	public void v_Selecao_De_Enderecos() {
-		System.out.println("v_Selecao_De_Enderecos");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.widget.Image[@content-desc='9eb94b2bf5e94d80987db6ed5d2e8bf9']")));
 	}
 
 }

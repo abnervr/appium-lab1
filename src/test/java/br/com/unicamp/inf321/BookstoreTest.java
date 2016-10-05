@@ -25,7 +25,6 @@ import org.graphwalker.core.generator.AStarPath;
 import org.graphwalker.core.generator.CombinedPath;
 import org.graphwalker.core.generator.RandomPath;
 import org.graphwalker.java.test.Result;
-import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -62,13 +61,13 @@ public class BookstoreTest {
 		// cria observer para habilitar execução do modelo animado
 		System.setProperty("org.graphstream.ui.renderer", "org.graphstream.ui.j2dviewer.J2DGraphRenderer");
 		graph = new MultiGraph(BookstoreTest.class.getSimpleName() + "_" + testName.getMethodName());
-		graph.display(true);
+		//graph.display(true);
 		observer = new GraphStreamObserver(graph);
 	}
 	
 	
 
-	@After
+	//@After
 	public void afterTest() throws Exception {
 		//Capture screenshot
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
@@ -113,7 +112,6 @@ public class BookstoreTest {
 	@Test
 	public void runSmokeTest() {
 		CombinedPath cp = new CombinedPath();
-		cp.addPathGenerator(new AStarPath(new ReachedEdge("e_FinalizarCarrinhoDeslogado")));
 		cp.addPathGenerator(new AStarPath(new ReachedVertex("v_Compra_Finalizada")));
 		
 		Result result = new GraphWalkerTestBuilder()

@@ -61,8 +61,6 @@ public class SampleBookstoreTest {
 	@Test
 	public void runSmokeTest() {
 		CombinedPath cp = new CombinedPath();
-		cp.addPathGenerator(new AStarPath(new ReachedEdge("e_FinalizarCarrinhoDeslogado")));
-		//cp.addPathGenerator(new AStarPath(new ReachedVertex("v_EditTitleView")));
 		cp.addPathGenerator(new AStarPath(new ReachedVertex("v_Compra_Finalizada")));
 		
 		Result result = new GraphWalkerTestBuilder()
